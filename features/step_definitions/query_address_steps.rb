@@ -20,7 +20,7 @@ Então('validar o retorno para o cenário {string}') do |tipo|
     expect(@response['uf']).to eql('SP')
     expect(@response['ibge']).to eql('3550308')
     expect(@response['gia']).to eql('1004')
-    puts "O Codigo do IBGE e #{@response['ibge']}"
+    puts "O Código do IBGE é : #{@response['ibge']}"
   else
     @response.code.eql?(200)
     expect(@response).to have_key('erro')
